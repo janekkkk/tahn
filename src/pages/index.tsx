@@ -1,118 +1,75 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import {Inter} from 'next/font/google'
+import {Donate} from "@/components/Donate";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({subsets: ['latin']})
 
 export default function Home() {
-  return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    return (
+        <div className="flex h-full flex-col bg-zinc-50 dark:bg-black scroll-auto min-h-screen ">
+            <main
+                className={`flex justify-center sm:px-8 ${inter.className}`}
+            >
+                <div className="px-4 w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20">
+                    <article className="prose lg:prose-xl">
+
+                        <div className="w-full h-96 relative mt-0 mb-20">
+                            <Image src="/tahn_janna.jpg" alt="" fill className="object-cover"/>
+                        </div>
+
+                        <h1 className="mt-20">
+                            Lieve Tahn
+                        </h1>
+
+                        <p>
+                            Deze zondag stond onze wereld op zijn kop... Na een fantastische housewarming/verjaardag van
+                            Janna gingen we allemaal met warme harten en een grote glimlachen naar huis. Niets kon ons
+                            voorbereiden voor wat er komen zou. Het hart van onze lieve Tahn, onze spring in het veld,
+                            de
+                            definitie van energie en alles wat goed is in het leven, stond stil en startte niet meer..
+                            er
+                            zijn geen woorden voor deze situatie, het is zo absurd hoe je het ene moment samen staat de
+                            dansen en knuffelen en lachen om minder dan 24 uur later alleen maar verdriet te voelen.
+                            Alleen
+                            maar ongeloof... Want hoe kan dit? Hoe kan ze er niet meer zijn? Dit is toch een hele hele
+                            slechte grap? Maar dat is het helaas niet. Het is echt zo en dat is een besef dat iedere
+                            minuut
+                            weer meer binnen sijpelt... Daarbovenop komt nog eens dat deze wereld helaas om geld draait.
+                            Het
+                            is absurd hoe duur een uitvaart is en daarom deze crowdfunding. Zo kunnen we Janna een hart
+                            onder de riem stoppen. Haar pijn zal het niet wegnemen maar het creëert meer ruimte om Tahn
+                            het
+                            afscheid te geven dat ze verdient.
+                        </p>
+
+                        <div>
+                            <h2 className="text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-2xl mt-6">
+                                Alle hulp is welkom
+                            </h2>
+
+                            <p>Onze lieve Tahn Matulessy is afgelopen zondag onverwachts overleden aan een
+                                hartstilstand. Er
+                                is alleen geen uitvaart verzekering. Wij hopen als vrienden en familie op deze manier
+                                een
+                                bedrag bij elkaar te kunnen krijgen om de kosten van de uitvaart te dekken.</p>
+
+                            <div className="mt-8 relative">
+                                <Donate/>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="https://open.spotify.com/playlist/38WoXVIhrK3k8Dols5oKia?si=935f2f37c17b42f2&pt=f5fd5c604d29f8ff18d5348f08ced57c">Spotify
+                                link</a>
+                        </div>
+                    </article>
+
+                </div>
+
+
+            </main>
+
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    )
 }
